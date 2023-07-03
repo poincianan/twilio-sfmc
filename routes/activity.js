@@ -120,7 +120,8 @@ exports.execute = function (req, res) {
           .create({ 
              body: body,
              messagingServiceSid: messagingService,
-             to: to
+             to: '+'+to //<---- Updating to E.164 formatting phone number 
+              // ref. https://support.twilio.com/hc/en-us/articles/223183008-Formatting-International-Phone-Numbers
            }) 
            .then(message => console.log(message.sid)) 
            .done(); 
