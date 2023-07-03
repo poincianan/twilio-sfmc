@@ -15,11 +15,12 @@
     "arguments": {
         "execute": {
             "inArguments": [
-                {
-                  "email": "{{Contact.Default.EmailAddress}}",
-                  "to": "{{Contact.Attribute.Custom_SMS.TwilioNumber}}" 
-                  
-                }               
+                        {
+                          "emailAddress": "{{InteractionDefaults.Email}}"
+                        },
+                        {
+                          "to": "{{Contact.Default.PhoneNumber}}"
+                        }               
             ],
             "outArguments": [],
             "url": "https://twilio-sms-custom-activity-47671e1dafe3.herokuapp.com/journeybuilder/execute/",
