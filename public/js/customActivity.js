@@ -101,7 +101,7 @@ define([
             "authToken": authToken,
             "messagingService": messagingService,
             "body": body,
-            "to": "{{interactionDefaults.MobileNumber}}" ,//<----This should map to your data extension name and phone number column
+            "to": "{{interactionDefaults.MobileNumber}}",//<----This MobileNumber is pulled from Journey-Level Setting (Channel address or Entry DE)
            
         }];       
         payload['metaData'].isConfigured = true;
