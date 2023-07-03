@@ -120,7 +120,7 @@ exports.execute = function (req, res) {
           .create({ 
              body: body,
              from: '+12176451191',
-             to: '+'+to
+             to: to
            }) 
            .then(message => console.log(message.sid)) 
            .done(); 
