@@ -120,7 +120,7 @@ exports.execute = function (req, res) {
           .create({ 
              body: body,
              messagingServiceSid: messagingService,
-             to: '+'+to
+             to: to
            }) 
            .then(message => console.log(message.sid)) 
            .done(); 
