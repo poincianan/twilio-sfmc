@@ -63,10 +63,10 @@ exports.edit = function (req, res) {
     console.log("3");	
     console.log("2");	
     console.log("1");	
-    //console.log("Edited: "+req.body.inArguments[0]);    
+    console.log("Edited: "+req.body.inArguments[0]);    
     
     // Data from the req and put it in an array accessible to the main app.
-    //console.log( req.body );
+    console.log( req.body );
     console.log("coming in exports of edit");
     logData(req);
     res.send(200, 'Edit');
@@ -82,10 +82,10 @@ exports.save = function (req, res) {
     console.log("3");	
     console.log("2");	
     console.log("1");	
-    //console.log("Saved: "+req.body.inArguments[0]);
+    console.log("Saved: "+req.body.inArguments[0]);
     
     // Data from the req and put it in an array accessible to the main app.
-  //  console.log( req.body );
+    console.log( req.body );
     console.log("in the save function ");
     logData(req);
     res.send(200, 'Save');
@@ -101,7 +101,7 @@ exports.execute = function (req, res) {
     console.log("3");	
     console.log("2");	
     console.log("1");	
-      console.log("Executed: "+req.body.inArguments[0]);
+    console.log("Executed: "+req.body.inArguments[0]);
 
 
     var requestBody = req.body.inArguments[0];
@@ -162,10 +162,10 @@ exports.publish = function (req, res) {
     console.log("3");	
     console.log("2");	
     console.log("1");	
-    //console.log("Published: "+req.body.inArguments[0]);        
+    console.log("Published: "+req.body.inArguments[0]);        
     
     // Data from the req and put it in an array accessible to the main app.
-    //console.log( req.body );
+     console.log( req.body );
      logData(req);
      res.send(200, 'Publish');
      console.log("coming to publish");
@@ -181,10 +181,10 @@ exports.validate = function (req, res) {
     console.log("3");	
     console.log("2");	
     console.log("1");	
-    //console.log("Validated: "+req.body.inArguments[0]);       
+    console.log("Validated: "+req.body.inArguments[0]);       
     
     // Data from the req and put it in an array accessible to the main app.
-    //console.log( req.body );
+    console.log( req.body );
     logData(req);
     res.send(200, 'Validate');
     
