@@ -57,10 +57,7 @@ While you can certainly tweak this example to send directly from a short code, y
 - https://YOUR-APP-URL.herokuapp.com/validate 
 - https://YOUR-APP-URL.herokuapp.com/stop 
 - https://YOUR-APP-URL.herokuapp.com/save
-4. Open public/js/customActivity.js and
-5. Replace {{Contact.Attribute.TwilioV1.TwilioNumber}} with the correct data extension and column name that will be used to reference the TO phone number.
-- {{Contact.Attribute.YOUR-DATA-EXTENSION-NAME.YOUR-PHONE-NUMBER-COLUMN}}
-- This is something that is typically customized when setting up Marketing Cloud but is needed in order for Twilio to understand WHO the message needs to be sent to.
+  
 
 The index.html defines how the Marketer will see/interact with the Twilio Messaging Service.  By default, the code suggested asks for the following as a starting point: 
 - Account SID
