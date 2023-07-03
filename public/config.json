@@ -17,51 +17,55 @@
             "inArguments": [
                 {
                   "email": "{{Contact.Default.EmailAddress}}",
-                  "to": "{{Contact.Attribute.TwilioSMS.EmailAddress}}" 
+                  "to": "{{Contact.Attribute.Custom_SMS.TwilioNumber}}" 
+                  
                 }               
             ],
             "outArguments": [],
-            "url": "https://twilio-sms-custom-activity-47671e1dafe3.herokuapp.com/journeybuilder/execute",
+            "url": "https://twilio-sms-custom-activity-47671e1dafe3.herokuapp.com/journeybuilder/execute/",
             "verb": "POST",
             "body": "",
             "format": "json",
             "useJwt": false,
-            "timeout": 2000
+            "timeout": 100000,
+            "retryCount": 1,
+            "retryDelay": 10000,
+            "concurrentRequests": 5
         }
     },
     "configurationArguments": {
-      "applicationExtensionKey": "e962d1d4-8b07-4e76-89be-ecd1f1423b6d",
+      "applicationExtensionKey": "e5a60ad3-5916-4f1a-b2cb-1df0a8632ce6",
        "save": {
-           "url": "https://twilio-sms-custom-activity-47671e1dafe3.herokuapp.com/save",
+           "url": "https://twilio-sms-custom-activity-47671e1dafe3.herokuapp.com/journeybuilder/save/",
             "verb": "POST",
             "body": "",
             "format": "json",
             "useJwt": false,
-            "timeout": 2000
+            "timeout": 3000 
        },
        "publish": {
-           "url": "https://twilio-sms-custom-activity-47671e1dafe3.herokuapp.com/publish",
+           "url": "https://twilio-sms-custom-activity-47671e1dafe3.herokuapp.com/journeybuilder/publish/",
             "verb": "POST",
             "body": "",
             "format": "json",
             "useJwt": false,
-            "timeout": 2000
+            "timeout": 3000
        },
        "validate": {
-           "url": "https://twilio-sms-custom-activity-47671e1dafe3.herokuapp.com/validate",
+           "url": "https://twilio-sms-custom-activity-47671e1dafe3.herokuapp.com/journeybuilder/validate/",
             "verb": "POST",
             "body": "",
             "format": "json",
             "useJwt": false,
-            "timeout": 2000
+            "timeout": 3000
        },
        "stop": {
-           "url": "https://twilio-sms-custom-activity-47671e1dafe3.herokuapp.com/stop",
+           "url": "https://twilio-sms-custom-activity-47671e1dafe3.herokuapp.com/journeybuilder/stop",
             "verb": "POST",
             "body": "",
             "format": "json",
             "useJwt": false,
-            "timeout": 2000
+            "timeout": 3000
        }
     },
     "wizardSteps": [
@@ -77,8 +81,7 @@
     "schema": {
         "arguments": {
             "execute": {
-                "inArguments": [
-                    {
+                "inArguments": [{
                         "accountSid": {
                             "dataType": "String",
                             "isNullable": false,
@@ -101,7 +104,7 @@
                     },                    
                     {
                         "to": {
-                            "dataType": "Phone",
+                            "dataType": "Text",
                             "isNullable": false,
                             "direction": "out"   
                         }
